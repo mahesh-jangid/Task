@@ -83,7 +83,17 @@ const EditPost = () => {
         <ModalContent>
           <ModalHeader>Edit Post</ModalHeader>
           <ModalCloseButton />
-
+          {Error !== null && (
+            <AlertMessage variant={"error"}>
+              There was an error processing your request. Error:$
+              {Error}
+            </AlertMessage>
+          )}
+          {IsEdited && (
+            <AlertMessage variant={"success"}>
+              Post Successfully Added
+            </AlertMessage>
+          )}
           <ModalBody pb={6}>
             <chakra.form onSubmit={handleSubmit}>
               <FormLabel>Title</FormLabel>
@@ -110,17 +120,7 @@ const EditPost = () => {
                 name="userId"
                 required
               />
-              {Error !== null && (
-                <AlertMessage variant={"error"}>
-                  There was an error processing your request. Error:$
-                  {Error}
-                </AlertMessage>
-              )}
-              {IsEdited && (
-                <AlertMessage variant={"success"}>
-                  Post Successfully Added
-                </AlertMessage>
-              )}
+
               <Button type="submit" colorScheme="pink" variant="outline" my={4}>
                 {/* {Loading ? <Spinner color="white.500" /> : "Add Post"} */}
 
