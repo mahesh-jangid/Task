@@ -89,11 +89,7 @@ const EditPost = () => {
               {Error}
             </AlertMessage>
           )}
-          {IsEdited && (
-            <AlertMessage variant={"success"}>
-              Post Successfully Added
-            </AlertMessage>
-          )}
+
           <ModalBody pb={6}>
             <chakra.form onSubmit={handleSubmit}>
               <FormLabel>Title</FormLabel>
