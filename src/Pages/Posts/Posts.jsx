@@ -72,7 +72,7 @@ const Posts = () => {
           <Tbody>
             {Posts.map((post) => {
               return (
-                <Tr maxH={"40%"}>
+                <Tr maxH={"40%"} key={post.id}>
                   <Td>{post.title}</Td>
                   <Td
                     maxW="md"
