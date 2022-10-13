@@ -47,13 +47,7 @@ const EditPost = () => {
       EditPosts(`https://jsonplaceholder.typicode.com/posts/${id}`, prevpost)
     );
   };
-  // useEffect(() => {
-  //   if (Error !== null) {
-  //     alert("err");
-  //   } else {
-  //     alert("added");
-  //   }
-  // });
+
   useEffect(() => {
     const getPrevPost = async () => {
       try {
